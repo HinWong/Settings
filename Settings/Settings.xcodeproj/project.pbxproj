@@ -78,6 +78,17 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		4E76434C240DB063005D9B1A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FB160A6F23F756B80092DB05 /* AppDelegate.swift */,
+				FB160A7123F756B80092DB05 /* SceneDelegate.swift */,
+				FB160A7323F756B80092DB05 /* ViewController.swift */,
+				FB160A7523F756B80092DB05 /* Main.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		FB160A6323F756B80092DB05 = {
 			isa = PBXGroup;
 			children = (
@@ -100,10 +111,7 @@
 				4E29A7D3240D7F0F007DC09C /* Model Controller */,
 				4E29A7D0240D7DA5007DC09C /* Resources */,
 				4E29A7CF240D7D12007DC09C /* Model */,
-				FB160A6F23F756B80092DB05 /* AppDelegate.swift */,
-				FB160A7123F756B80092DB05 /* SceneDelegate.swift */,
-				FB160A7323F756B80092DB05 /* ViewController.swift */,
-				FB160A7523F756B80092DB05 /* Main.storyboard */,
+				4E76434C240DB063005D9B1A /* Resource */,
 				4E764347240D8FCE005D9B1A /* View Controllers */,
 				FB160A7A23F756B90092DB05 /* LaunchScreen.storyboard */,
 				FB160A7D23F756B90092DB05 /* Info.plist */,

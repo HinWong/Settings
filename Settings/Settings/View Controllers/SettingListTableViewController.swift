@@ -9,10 +9,9 @@
 import UIKit
 
 class SettingListTableViewController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     // MARK: - Table view data source
@@ -27,7 +26,23 @@ class SettingListTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "settingCell", for: indexPath) as? SettingTableViewCell else {return UITableViewCell()}
         let setting = SettingController.settings[indexPath.row]
         cell.updateViews(with: setting)
+        
+        //Step 4 - Assign the delegate
+        cell.delegate = self
 
         return cell
     }
 } // End of class
+
+// Step 3 - Conform to protocol
+
+extension SettingListTableViewController: SettingTableViewCellDelegate{
+    func settingSwitchTapped(for cell: SettingTableViewCell) {
+        // TBVC -> ModelController to update the isOn -> Cell update
+        guard let index = tableView.indexPath(for: cell) else {return}
+        let setting = SettingController.settings[index.row]
+        SettingController.toggleIsOn(for: setting)
+        cell.updateViews(with: setting)
+    }
+    
+}
